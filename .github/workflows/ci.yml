@@ -34,3 +34,8 @@ jobs:
       run: npm run test:coverage
       continue-on-error: true
 
+    - name: Coveralls GitHub Action
+      uses: coverallsapp/github-action@v3
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+
