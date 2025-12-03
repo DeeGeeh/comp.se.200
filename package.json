@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Software Testing",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "jest",
     "test:coverage": "c8 --reporter=lcov --reporter=text --exclude='**/.internal/**' --exclude='**/node_modules/**' --exclude='**/__tests__/**' jest"
@@ -18,6 +19,7 @@
     "url": "https://github.com/DeeGeeh/comp.se.200/issues"
   },
   "homepage": "https://github.com/DeeGeeh/comp.se.200#readme",
+  "dependencies": {},
   "devDependencies": {
     "c8": "^10.1.3",
     "jest": "^30.2.0"
