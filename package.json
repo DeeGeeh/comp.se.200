@@ -4,9 +4,10 @@
   "description": "Software Testing",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:coverage": "c8 --reporter=text --reporter=html --exclude='**/.internal/**' --exclude='**/__tests__/**' npm test"
   },
+  "type": "module",
   "jest": {
     "testEnvironment": "node",
     "testMatch": [
@@ -20,7 +21,10 @@
     "coveragePathIgnorePatterns": [
       "/node_modules/",
       "/.internal/"
-    ]
+    ],
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.js$": "$1"
+    }
   },
   "repository": {
     "type": "git",
