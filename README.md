@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/DeeGeeh/comp.se.200/badge.svg)](https://coveralls.io/github/DeeGeeh/comp.se.200)
+
 # comp.se.200
 Software Testing
 
