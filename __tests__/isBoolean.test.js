@@ -1,27 +1,38 @@
 import isBoolean from '../src/isBoolean';
 
 describe('isBoolean', () => {
-  test('returns true for true value', () => {
+  test('returns true primitive', () => {
     expect(isBoolean(true)).toBe(true)
   })
 
-  test('returns true for false', () => {
+  test('Boolean false primtive', () => {
     expect(isBoolean(false)).toBe(true)
   })
 
-  test('returns false for null', () => {
+  test('Boolean object', () => {
+    expect(isBoolean(new Boolean(true))).toBe(true)
+  })
+
+  test('null', () => {
     expect(isBoolean(null)).toBe(false)
   })
 
-  test('returns false for array', () => {
-    expect(isBoolean([])).toBe(false)
+  test('undefined', () => {
+    expect(isBoolean()).toBe(false)
   })
-
-  test('returns false for int', () => {
+  test('number 0', () => {
+    expect(isBoolean(0)).toBe(false)
+  })
+  test('number 1', () => {
     expect(isBoolean(1)).toBe(false)
   })
-  test('returns false for string', () => {
-    expect(isBoolean("false")).toBe(false)
+  test('NaN', () => {
+    expect(isBoolean(NaN)).toBe(false)
   })
-
+  test('String true', () => {
+    expect(isBoolean("true")).toBe(false)
+  })
+  test('Empty array', () => {
+    expect(isBoolean([])).toBe(false)
+  })
 })
