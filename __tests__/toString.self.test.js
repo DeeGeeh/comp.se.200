@@ -40,5 +40,14 @@ describe('toString - Self-designed tests (Phase 1 plan)', () => {
   it('Test #10: Dumb array', () => {
     expect(toString([[[1]]])).toBe('1');
   });
+
+  it('Test #11: Null input', () => {
+    expect(toString(null)).toBe('');
+  });
+
+  it('Test #12: Undefined input', () => {
+    expect(toString(undefined)).toBe('');
+  });
+
 });
 
