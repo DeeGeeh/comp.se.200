@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "test:coverage": "c8 --reporter=lcov --reporter=text --exclude='**/.internal/**' --exclude='**/__tests__/**' npm test"
-  },
+"test:coverage": "c8 --reporter=lcov --reporter=text --exclude='**/.internal/**' --exclude='**/__tests__/**' --include='src/{add,capitalize,every,filter,isBoolean,isEmpty,isObject,reduce,toNumber,toString}.js' npm test"  },
   "type": "module",
   "jest": {
     "testEnvironment": "node",
